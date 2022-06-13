@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,EAAE,CACF,EAAE,CACF,CAAC,AAAC,CACE,UAAU,CAAE,CAAC,CACb,aAAa,CAAE,CAAC,CAChB,WAAW,CAAE,CAAC,CACd,cAAc,CAAE,CAAC,CACpB,AAED,AAAA,GAAG,AAAC,CACA,OAAO,CAAE,KAAK,CACd,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,IAAI,CACf,AAED,AAAA,KAAK,AAAC,CACF,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACZ,AAED,AAAA,KAAK,AAAC,CACF,eAAe,CAAE,IAAI,CACrB,KAAK,CAAE,OAAO,CAMjB,AARD,AAII,KAJC,AAIA,MAAM,CAJX,KAAK,AAKA,MAAM,AAAC,CACJ,KAAK,CHfE,OAAO,CGgBjB,AI5BL,AAAA,aAAa,AAAC,CACV,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CAC1B,AAED,AAEI,mBAFe,AAEd,IAAK,CAAA,WAAW,CAAE,CACf,YAAY,CAAE,IAAI,CACrB,AAEA,AAAD,wBAAM,AAAC,CACH,aAAa,CAAE,GAAG,CAClB,UAAU,CAAE,qBAAwB,CACvC,AAGL,AAAA,mBAAmB,AAAC,CAChB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CAEvB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CAEZ,KAAK,CPpBS,OAAO,COqBrB,aAAa,CAAE,GAAG,CAElB,UAAU,CAAE,KAAK,CPPC,KAAK,CACE,4BAA4B,COMe,gBAAgB,CPPlE,KAAK,CACE,4BAA4B,COaxD,AAlBD,AAaI,mBAbe,AAad,MAAM,CAbX,mBAAmB,AAcd,MAAM,AAAC,CACJ,KAAK,CPzBM,IAAO,CO0BlB,gBAAgB,CPtBT,OAAO,COuBjB,AAGL,AAAA,mBAAmB,AAAC,CAChB,IAAI,CAAE,YAAY,CAKrB,AAHI,AAAD,0BAAQ,AAAC,CACL,IAAI,CPlCO,IAAO,COmCrB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/utils/_variables.scss",
+        "../scss/utils/_placeholders.scss",
+        "../scss/utils/_mixins.scss",
+        "../scss/base/_reset.scss",
+        "../scss/base/_container.scss",
+        "../scss/base/_card-set.scss",
+        "../scss/components/_button.scss",
+        "../scss/components/_socials.scss",
+        "../scss/layouts/_header.scss",
+        "../scss/layouts/_hero.scss",
+        "../scss/layouts/_about.scss",
+        "../scss/layouts/_price.scss",
+        "../scss/layouts/_features.scss",
+        "../scss/layouts/_team.scss",
+        "../scss/layouts/_portfolio.scss",
+        "../scss/layouts/_contacts.scss",
+        "../scss/layouts/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
