@@ -1,0 +1,44 @@
+.about__container {
+    display: flex;
+}
+
+.about__list {
+    display: none;
+
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.about__item {
+    margin-right: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @include mq(desktop) {
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about__image {
+    @include mq(tablet) {
+        min-width: 330px;
+        height: 235px;
+    }
+
+    @include mq(desktop) {
+        min-width: 270px;
+        height: 445px;
+    }
+}

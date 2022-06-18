@@ -1,0 +1,144 @@
+.price {
+    width: 100%;
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #111319;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: url(../images/price/bg-price-mob.png), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price-mob.webp) 1x);
+
+    @include mq(retina) {
+        background-image: url(../images/price/bg-price-mob@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+        background-image: -webkit-image-set(url(../images/price/bg-price-mob@2x.webp) 2x);
+    }
+
+    @include mq(tablet) {
+        background-image: url(../images/price/bg-price-tab.png), linear-gradient(to bottom, #191c26, #191c26);
+        background-image: -webkit-image-set(url(../images/price/bg-price-tab.webp) 1x);
+
+        @include mq(retina) {
+            background-image: url(../images/price/bg-price-tab@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+            background-image: -webkit-image-set(url(../images/price/bg-price-tab@2x.webp) 2x);
+        }
+    }
+
+    @include mq(desktop) {
+        max-width: 1280px;
+
+        background-image: url(../images/price/bg-price-desk.png), linear-gradient(to bottom, #191c26, #191c26);
+        background-image: -webkit-image-set(url(../images/price/bg-price-desk.webp) 1x);
+
+        @include mq(retina) {
+            background-image: url(../images/price/bg-price-desk@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+            background-image: -webkit-image-set(url(../images/price/bg-price-desk@2x.webp) 2x);
+        }
+    }
+}
+
+.price__group {
+    margin-bottom: 44px;
+
+    @include mq(desktop) {
+        margin-bottom: 46px;
+    }
+}
+
+.price__list {
+    margin-bottom: 50px;
+    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+    @include mq(desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.price__item {
+    flex-basis: 50%;
+    transition: transform var(--slow-anim), background-image var(--slow-anim);
+
+    @include mq(desktop) {
+
+        &:first-child {
+            background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+            &:first-child:hover,
+            &:first-child:focus {
+                z-index: 2;
+                transform: scale(1.25);
+                background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+
+                &~.price__item:last-child {
+                    transform: scale(0.8);
+                    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+                }
+            }
+        }
+
+        &:last-child {
+            background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+
+            &:last-child:hover,
+            &:last-child:focus {
+                z-index: 2;
+                transform: scale(1.25);
+                background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+                &~.price__item:first-child {
+                    transform: scale(0.8);
+                    background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+                }
+            }
+        }
+    }
+}
+
+.price__inner-list {
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &:not(:last-child) {
+        padding-bottom: 30px;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:last-child {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.price__inner-item {
+    font-size: 14px;
+    line-height: 2.14;
+
+    color: var(--color-text-light);
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    @include mq(tablet) {
+        font-size: 18px;
+        line-height: 1.67;
+    }
+}
+
+.price__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -2,22 +2,32 @@
 @import './utils/variables';
 @import './utils/placeholders';
 @import './utils/mixins';
+@import './utils/breakpoints';
 
 // base styles
 @import './base/reset';
+@import './base/common';
+@import './base/section';
 @import './base/container';
-@import './base/card-set';
+@import './base/gallery-set';
+@import './base/animations';
 
 // components
 @import './components/button';
-@import './components/socials';
+@import './components/social-links';
+@import './components/visually-hidden';
+@import './components/modal/backdrop';
+@import './components/modal/modal-form';
+@import './components/modal/modal';
+@import './components/slider/slider-controls';
+@import './components/slider/slider-pagination';
 
 // layuots
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/about';
+@import './layouts/benefits';
 @import './layouts/price';
-@import './layouts/features';
 @import './layouts/team';
 @import './layouts/portfolio';
 @import './layouts/contacts';

@@ -24,15 +24,16 @@
     width: 44px;
     height: 44px;
 
-    color: $color-text-main;
+    color: var(--color-text-main);
     border-radius: 50%;
+    background-color: var(--color-background-main);
 
-    transition: color $transition-duration $transition-timing-function, background-color $transition-duration $transition-timing-function;
+    transition: background-color var(--animation);
 
     &:hover,
     &:focus {
-        color: $color-text-white;
-        background-color: $color-accent;
+        color: var(--color-text-white);
+        background-color: var(--color-accent);
     }
 }
 
@@ -40,6 +41,6 @@
     fill: currentColor;
 
     &--white {
-        fill: $color-text-white;
+        fill: var(--color-text-white);
     }
 }

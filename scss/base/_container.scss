@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 31px;
+
+
+    @include mq(mobile) {
+        width: $mobile;
+    }
+
+    @include mq(tablet) {
+        width: $tablet;
+        padding: 0 39px;
+    }
+
+    @include mq(desktop) {
+        width: $desktop;
+        padding: 0 55px;
+    }
+}

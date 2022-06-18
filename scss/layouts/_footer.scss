@@ -1,0 +1,33 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 44px 31px;
+
+    @include mq(tablet) {
+        align-items: center;
+    }
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+
+    color: var(--color-text-light);
+}
+
+.socials {
+    display: flex;
+}
+
+.socials__item {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
