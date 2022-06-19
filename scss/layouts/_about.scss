@@ -8,22 +8,27 @@
     @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
+        margin-right: 30px;
     }
 
     @include mq(desktop) {
         display: flex;
         flex-wrap: nowrap;
+        margin-right: 64px;
     }
 }
 
 .about__item {
-    margin-right: 30px;
 
     &:not(:last-child) {
         margin-bottom: 30px;
     }
 
     @include mq(desktop) {
+
+        &:first-child {
+            margin-right: 30px;
+        }
 
         &:not(:last-child) {
             margin-bottom: 0;

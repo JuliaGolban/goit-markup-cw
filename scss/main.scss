@@ -9,18 +9,20 @@
 @import './base/common';
 @import './base/section';
 @import './base/container';
-@import './base/gallery-set';
 @import './base/animations';
+@import './base/js-selectors';
 
 // components
+@import './components/visually-hidden';
 @import './components/button';
 @import './components/social-links';
-@import './components/visually-hidden';
+@import './components/socials';
 @import './components/modal/backdrop';
 @import './components/modal/modal-form';
 @import './components/modal/modal';
-@import './components/slider/slider-controls';
-@import './components/slider/slider-pagination';
+@import './components/slider';
+@import './components/mobile-menu';
+@import './components/scroll-to-top';
 
 // layuots
 @import './layouts/header';

@@ -1,0 +1,30 @@
+.socials {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &::before {
+        display: block;
+        content: " ";
+        width: 60px;
+        height: 1px;
+        margin-right: 40px;
+
+        background: currentColor;
+    }
+}
+
+.socials__item {
+
+    &:first-child {
+        margin-right: 40px;
+    }
+}
+
+.socials__link {
+    padding: 44px 0;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}

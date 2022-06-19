@@ -1,11 +1,11 @@
 .header {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
 
-    @include mq(tablet) {
-        height: auto;
-        position: sticky;
-        top: 0;
+    &.js-no-transparency {
+        background-color: rgba(25, 28, 38, 0.3);
     }
 }
 
@@ -15,12 +15,23 @@
     justify-content: space-between;
     align-content: center;
     text-align: left;
+
 }
 
 // ========== logo ==========
 
 .logo {
-    margin-right: 130px;
+    margin-top: 40px;
+    fill: var(--color-text-white);
+
+    @include mq(tablet) {
+        margin-top: 30px;
+        fill: currentColor;
+    }
+
+    @include mq(desktop) {
+        margin-right: 100px;
+    }
 }
 
 // ========== navigation ==========
@@ -32,7 +43,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
     }
 }
 
@@ -54,9 +64,11 @@
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.1em;
+
+    color: var(--color-text-white);
 }
 
-.navigation__link--active {
+.navigation__link--current {
     position: relative;
     color: var(--color-accent);
 
@@ -69,7 +81,7 @@
         width: 100%;
         height: 2px;
 
-        background: currentColor;
+        background-color: currentColor;
     }
 }
 
@@ -81,6 +93,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
 
         margin-left: auto;
     }
@@ -88,6 +101,8 @@
 
 .header__phone {
     margin-right: 40px;
+    padding-top: 52px;
+    padding-bottom: 52px;
 
     font-weight: 600;
     font-size: 12px;
@@ -96,4 +111,5 @@
     text-transform: uppercase;
 
     color: var(--color-text-white);
+    transition: color var(--animation);
 }

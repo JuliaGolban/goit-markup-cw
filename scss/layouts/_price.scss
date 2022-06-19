@@ -135,6 +135,22 @@
         font-size: 18px;
         line-height: 1.67;
     }
+
+    & span:last-of-type {
+
+        order: 2;
+    }
+
+    &::after {
+        content: '';
+        flex-grow: 1;
+        order: 1;
+        height: 1px;
+        margin-left: 6px;
+        margin-right: 6px;
+
+        background-color: rgba(157, 164, 189, 0.12);
+    }
 }
 
 .price__btn {

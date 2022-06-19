@@ -31,12 +31,14 @@
     <header class="header" id="header">
         <div class="header__container container">
             <a class="link" href="./index.html" aria-label="logo company">
-                <img class="logo" src="./images/Logo.png" alt="logo website BarberShop" width="69" height="56">
+                <svg class="logo" alt="logo BarberShop" width="69" height="56">
+                    <use href="./images/icons/symbol-defs.svg#logo"></use>
+                </svg>
             </a>
             <nav class="navigation">
                 <ul class="navigation__list list">
                     <li class="navigation__item">
-                        <a class="navigation__link link navigation__link--active" href="#about"
+                        <a class="navigation__link link navigation__link--current" href="#about"
                             aria-label="About">About</a>
                     </li>
                     <li class="navigation__item">
@@ -57,32 +59,32 @@
             </div>
         </div>
         <!-- ========= MOBILE MENU ===========-->
-        <!-- <div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
+        <div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
             <nav class="mobile-menu__navigation">
                 <ul class="mobile-menu__navigation-list list">
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#about" aria-label="About">About</a>
-                        </li>
+                    </li>
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#price"
                             aria-label="Services and Prices">Services and Prices</a>
-                        </li>
+                    </li>
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#team" aria-label="Barbers">Barbers</a>
-                        </li>
+                    </li>
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#contacts" aria-label="Contacts">Contacts</a>
-                        </li>
+                    </li>
                 </ul>
             </nav>
-            <a class="contacts__phone" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="btn btn--mode-light" type="button">book a service</button>
-            <ul class="mobile-menu__socials list">
-                <li class="mobile-menu__socials-item"><a class="mobile-menu__socials-link link"
-                        href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">Instagram</a>
+            <a class="contacts__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
+            <button class="btn btn--mode-light" type="button" data-modal-open>book a service</button>
+            <ul class="mobile-menu__socials socials list">
+                <li class="socials__item"><a class="socials__link link" href="https://www.instagram.com/"
+                        target="_blank" rel="noreferrer noopener">Instagram</a>
                 </li>
-                <li class="mobile-menu__socials-item"><a class="mobile-menu__socials-link link"
-                        href="htts://www.youtube.com" target="_blank" rel="noreferrer noopener">Youtube</a>
+                <li class="socials__item"><a class="socials__link link" href="htts://www.youtube.com" target="_blank"
+                        rel="noreferrer noopener">Youtube</a>
                 </li>
             </ul>
         </div>
@@ -92,9 +94,9 @@
                 <use class="mobile-btn__icon-open" href="./images/icons/symbol-defs.svg#menu_40px"></use>
                 <use class="mobile-btn__icon-close" href="./images/icons/symbol-defs.svg#close_40px"></use>
             </svg>
-        </button> -->
+        </button>
         <!-- ==== MODAL WINDOW ==== -->
-        <!-- <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="modal__btn-close" aria-label="Close" data-modal-close>
                     <svg class="modal__icon" width="40" height="40">
@@ -117,7 +119,7 @@
                         <span class="form__wrapper">
                             <input class="form__input" type="tel" name="user-tel" placeholder=" " required />
                             <svg class="form__icon" width="18" height="18">
-                                <use href="./images/icons/symbol-defs.svg#phone"></use>
+                                <use href="./images/icons/symbol-defs.svg#smartphone"></use>
                             </svg>
                         </span>
                     </label>
@@ -126,7 +128,7 @@
                         <span class="form__wrapper">
                             <input class="form__input" type="email" name="user-email" placeholder=" " />
                             <svg class="form__icon" width="18" height="18">
-                                <use href="./images/icons/symbol-defs.svg#mail"></use>
+                                <use href="./images/icons/symbol-defs.svg#email"></use>
                             </svg>
                         </span>
                     </label>
@@ -151,12 +153,17 @@
                     <button type="submit" class="form__btn btn btn--mode-light">Send</button>
                 </form>
             </div>
-        </div> -->
+        </div>
     </header>
     <!-- =========== UNIQUE CONTENT ============= -->
     <main>
         <!-- =========== HERO SECTION ============= -->
         <section class="hero" id="hero">
+            <div class="slides">
+                <picture id="slide-1"></picture>
+                <picture id="slide-2"></picture>
+                <picture id="slide-2"></picture>
+            </div>
             <div class="hero__container container">
                 <div class="hero__group title-group">
                     <p class="uppertitle uppertitle--mode-light">A hair salon for men in Kyiv</p>
@@ -171,15 +178,13 @@
                         <li class="slider__item"><a href="#slide-2"></a></li>
                         <li class="slider__item"><a href="#slide-3"></a></li>
                     </ul>
-                    <picture id="slide-1"></picture>
-                    <picture id="slide-2"></picture>
-                    <picture id="slide-2"></picture>
-                    <ul class="slider__list list">
-                        <li class="slider__item-controls">
-                            <button class="slider__btn" type="button">Back</button>
+                    <ul class="slider__controls list">
+                        <li class="slider__controls-item">
+                            <button class="slider__controls-btn" type="button">Back</button>
                         </li>
-                        <li class="slider__item-controls">
-                            <button class="slider__btn slider__btn--forward" type="button">Next</button>
+                        <li class="slider__controls-item">
+                            <button class="slider__controls-btn slider__controls-btn--forward"
+                                type="button">Next</button>
                         </li>
                     </ul>
                 </div>
@@ -516,7 +521,7 @@
                     <h2 class="section-title visually-hidden">Our portfolio</h2>
                 </div>
                 <ul class="gallery__list list">
-                    <li class="gallery__item">
+                    <li class="gallery__item" data-sale="Discount 30%">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/portfolio/gallery-1-desk.webp 1x, ./images/portfolio/gallery-1-desk@2x.webp 2x"
@@ -535,7 +540,7 @@
                                 width="418" height="360" loading="lazy" />
                         </picture>
                     </li>
-                    <li class="gallery__item">
+                    <li class="gallery__item" data-sale="Discount 30%">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/portfolio/gallery-2-desk.webp 1x, ./images/portfolio/gallery-2-desk@2x.webp 2x"
@@ -555,7 +560,7 @@
                                 width="418" height="360" loading="lazy" />
                         </picture>
                     </li>
-                    <li class="gallery__item">
+                    <li class="gallery__item" data-sale="Discount 25%">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/portfolio/gallery-3-desk.webp 1x, ./images/portfolio/gallery-3-desk@2x.webp 2x"
@@ -575,7 +580,7 @@
                                 width="418" height="360" loading="lazy" />
                         </picture>
                     </li>
-                    <li class="gallery__item">
+                    <li class="gallery__item" data-sale="Discount 20%">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/portfolio/gallery-4-desk.webp 1x, ./images/portfolio/gallery-4-desk@2x.webp 2x"
@@ -678,9 +683,21 @@
             </ul>
         </div>
     </footer>
-    <!-- <script src="./js/modal.js"></script>
+    <a class="scroll-to-top" href="#hero">
+        <svg class="arrow-top" width="20" height="20">
+            <use href="./images/icons/symbol-defs.svg#arrow-up"></use>
+        </svg>
+    </a>
+
+    <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/slider.js"></script> -->
+    <script src="./js/slider.js"></script>
+    <script src="./js/header-scroll.js"></script>
+
+    <!-- ======= AOS aniamtion library ======= -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
+
 </body>
 
 </html>

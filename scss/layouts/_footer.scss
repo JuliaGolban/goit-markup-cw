@@ -3,10 +3,13 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    padding: 44px 31px;
+    padding-top: 44px;
+    padding-bottom: 44px;
 
     @include mq(tablet) {
         align-items: center;
+        padding-top: 56px;
+        padding-bottom: 56px;
     }
 }
 
@@ -16,18 +19,4 @@
     line-height: 1.36;
 
     color: var(--color-text-light);
-}
-
-.socials {
-    display: flex;
-}
-
-.socials__item {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-
-    &:not(:last-child) {
-        margin-right: 40px;
-    }
 }

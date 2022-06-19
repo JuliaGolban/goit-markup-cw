@@ -31,7 +31,7 @@
     @include mq(desktop) {
         max-width: 1280px;
 
-        background-position: top left calc(50% + 325px);
+        background-position: bottom right;
 
         background-image: url(../images/contacts/bg-contacts-desk.png), linear-gradient(to bottom, #191c26, #191c26);
         background-image: -webkit-image-set(url(../images/contacts/bg-contacts-desk.webp) 1x);

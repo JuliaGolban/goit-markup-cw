@@ -1,0 +1,17 @@
+// grid for collection with items
+
+:root {
+    --items: 3;
+    --indent: 30px;
+}
+
+%grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--indent);
+
+    &-item {
+        flex-basis: calc((100% - var(--indent) * (var(--items)-1))/ var(--items));
+    }
+}

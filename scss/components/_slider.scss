@@ -1,0 +1,76 @@
+// slider pagination
+
+.slider__pagination {
+    display: none;
+
+    @include mq(tablet) {
+        position: absolute;
+        top: 50%;
+        right: 39px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        width: 18px;
+    }
+}
+
+.slider__item {
+    width: 8px;
+    height: 2px;
+
+    background-color: var(--color-text-light);
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &--active {
+        width: 100%;
+        background-color: var(--color-text-white);
+    }
+}
+
+// slider controls
+.slider__controls {
+    display: none;
+
+    @include mq(tablet) {
+        position: absolute;
+        bottom: 40px;
+        right: 39px;
+
+        display: flex;
+    }
+}
+
+.slider__controls-btn {
+    width: 60px;
+    height: 24px;
+
+    margin-right: 26px;
+    padding: 0;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+
+    text-align: left;
+
+    color: rgba(157, 164, 189, 0.6);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+
+    &--forward {
+        margin-right: 0;
+
+        text-align: right;
+
+        color: var(--color-text-white);
+        border-bottom: 1px solid var(--color-background-main);
+    }
+}
