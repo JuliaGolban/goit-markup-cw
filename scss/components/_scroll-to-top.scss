@@ -1,14 +1,14 @@
 .scroll-to-top {
     position: fixed;
-    bottom: 50px;
+    bottom: 30px;
     right: 30px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 
     background-color: var(--color-accent);
     border: none;
@@ -16,8 +16,22 @@
     cursor: pointer;
 
     animation: slide-top 1s linear 2s infinite alternate both;
+
+    @include mq(tablet) {
+        bottom: 50px;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .arrow-top {
     fill: var(--color-text-white);
+
+    width: 10px;
+    height: 10px;
+
+    @include mq(tablet) {
+        width: 20px;
+        height: 20px;
+    }
 }

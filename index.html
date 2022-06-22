@@ -26,13 +26,13 @@
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
-<body>
+<body id="body" style="overflow: unset;">
     <!-- =========== HEADER ============= -->
     <header class="header" id="header">
         <div class="header__container container">
             <a class="link" href="./index.html" aria-label="logo company">
                 <svg class="logo" alt="logo BarberShop" width="69" height="56">
-                    <use href="./images/icons/symbol-defs.svg#logo"></use>
+                    <use href="./images/sprite.svg#logo"></use>
                 </svg>
             </a>
             <nav class="navigation">
@@ -78,7 +78,7 @@
                 </ul>
             </nav>
             <a class="contacts__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="btn btn--mode-light" type="button" data-modal-open>book a service</button>
+            <button class="btn btn--mode-light" type="button" href="#book">book a service</button>
             <ul class="mobile-menu__socials socials list">
                 <li class="socials__item"><a class="socials__link link" href="https://www.instagram.com/"
                         target="_blank" rel="noreferrer noopener">Instagram</a>
@@ -91,8 +91,8 @@
         <button class="mobile-btn" type="button" aria-label="Switch mobile menu" aria-expanded="false"
             aria-controls="mobile-menu" data-menu-button>
             <svg class="mobile-btn__icon" width="40" height="40">
-                <use class="mobile-btn__icon-open" href="./images/icons/symbol-defs.svg#menu_40px"></use>
-                <use class="mobile-btn__icon-close" href="./images/icons/symbol-defs.svg#close_40px"></use>
+                <use class="mobile-btn__icon-open" href="./images/sprite.svg#menu_40px"></use>
+                <use class="mobile-btn__icon-close" href="./images/sprite.svg#close_40px"></use>
             </svg>
         </button>
         <!-- ==== MODAL WINDOW ==== -->
@@ -100,7 +100,7 @@
             <div class="modal">
                 <button class="modal__btn-close" aria-label="Close" data-modal-close>
                     <svg class="modal__icon" width="40" height="40">
-                        <use href="./images/icons/symbol-defs.svg#close_40px"></use>
+                        <use href="./images/sprite.svg#close_40px"></use>
                     </svg>
                 </button>
                 <p class="modal__title">Leave your contacts, we'll call you back</p>
@@ -110,7 +110,7 @@
                         <span class="form__wrapper">
                             <input class="form__input" type="text" name="user-name" placeholder=" " required />
                             <svg class="form__icon" width="18" height="18">
-                                <use href="./images/icons/symbol-defs.svg#person"></use>
+                                <use href="./images/sprite.svg#person"></use>
                             </svg>
                         </span>
                     </label>
@@ -119,7 +119,7 @@
                         <span class="form__wrapper">
                             <input class="form__input" type="tel" name="user-tel" placeholder=" " required />
                             <svg class="form__icon" width="18" height="18">
-                                <use href="./images/icons/symbol-defs.svg#smartphone"></use>
+                                <use href="./images/sprite.svg#smartphone"></use>
                             </svg>
                         </span>
                     </label>
@@ -128,7 +128,7 @@
                         <span class="form__wrapper">
                             <input class="form__input" type="email" name="user-email" placeholder=" " />
                             <svg class="form__icon" width="18" height="18">
-                                <use href="./images/icons/symbol-defs.svg#email"></use>
+                                <use href="./images/sprite.svg#email"></use>
                             </svg>
                         </span>
                     </label>
@@ -141,7 +141,7 @@
                             <input class="form__input-checkbox visually-hidden" type="checkbox" name="agreement"
                                 required />
                             <svg class="form__icon form__icon--checked" width="16" height="15">
-                                <use href="./images/icons/symbol-defs.svg#check"></use>
+                                <use href="./images/sprite.svg#check"></use>
                             </svg>
                             <span class="form__icon form__icon--unchecked"></span>
                         </span>
@@ -159,11 +159,6 @@
     <main>
         <!-- =========== HERO SECTION ============= -->
         <section class="hero" id="hero">
-            <div class="slides">
-                <picture id="slide-1"></picture>
-                <picture id="slide-2"></picture>
-                <picture id="slide-2"></picture>
-            </div>
             <div class="hero__container container">
                 <div class="hero__group title-group">
                     <p class="uppertitle uppertitle--mode-light">A hair salon for men in Kyiv</p>
@@ -178,6 +173,63 @@
                         <li class="slider__item"><a href="#slide-2"></a></li>
                         <li class="slider__item"><a href="#slide-3"></a></li>
                     </ul>
+                    <!-- <div class="slides">
+                        <picture id="slide-1">
+                            <source media="(min-width:1280px)"
+                                srcset="./images/slider/slider-1-desk.webp 1x, ./images/slider/slider-1-desk@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width:768px)"
+                                srcset="./images/slider/slider-1-tab.webp 1x, ./images/slider/slider-1-tab@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width:767px)"
+                                srcset="./images/slider/slider-1-mob.webp 1x, ./images/slider/slider-1-mob@2x.webp 2x"
+                                type="image/webp" />
+                            <img class="team__image"
+                                srcset="./images/slider/slider-1-mob.jpg 480w, ./images/slider/slider-1-mob@2x.jpg 960w,
+                                        ./images/slider/slider-1-tab.jpg 609w, ./images/slider/slider-1-tab@2x.jpg 1218w,
+                                        ./images/slider/slider-1-desk.jpg 1125w, ./images/slider/slider-1-desk@2x.jpg 2250w"
+                                src="./images/slider/slider-1-mob.jpg" alt="Beard trim"
+                                sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                width="480" height="580" loading="lazy" />
+                        </picture>
+                        <picture id="slide-2">
+                            <picture id="slide-2">
+                                <source media="(min-width:1280px)"
+                                    srcset="./images/slider/slider-2-desk.webp 1x, ./images/slider/slider-2-desk@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)"
+                                    srcset="./images/slider/slider-2-tab.webp 1x, ./images/slider/slider-2-tab@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width:767px)"
+                                    srcset="./images/slider/slider-2-mob.webp 1x, ./images/slider/slider-2-mob@2x.webp 2x"
+                                    type="image/webp" />
+                                <img class="team__image"
+                                    srcset="./images/slider/slider-2-mob.jpg 480w, ./images/slider/slider-2-mob@2x.jpg 960w,
+                                            ./images/slider/slider-2-tab.jpg 609w, ./images/slider/slider-2-tab@2x.jpg 1218w,
+                                            ./images/slider/slider-2-desk.jpg 1125w, ./images/slider/slider-2-desk@2x.jpg 2250w"
+                                    src="./images/slider/slider-2-mob.jpg" alt="Beard trim"
+                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                    width="480" height="580" loading="lazy" />
+                            </picture>
+                            <picture id="slide-3">
+                                <source media="(min-width:1280px)"
+                                    srcset="./images/slider/slider-3-desk.webp 1x, ./images/slider/slider-3-desk@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)"
+                                    srcset="./images/slider/slider-3-tab.webp 1x, ./images/slider/slider-3-tab@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width:767px)"
+                                    srcset="./images/slider/slider-3-mob.webp 1x, ./images/slider/slider-3-mob@2x.webp 2x"
+                                    type="image/webp" />
+                                <img class="team__image"
+                                    srcset="./images/slider/slider-3-mob.jpg 480w, ./images/slider/slider-3-mob@2x.jpg 960w,
+                                            ./images/slider/slider-3-tab.jpg 609w, ./images/slider/slider-3-tab@2x.jpg 1218w,
+                                            ./images/slider/slider-3-desk.jpg 1125w, ./images/slider/slider-3-desk@2x.jpg 2250w"
+                                    src="./images/slider/slider-3-mob.jpg" alt="Beard trim"
+                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                    width="480" height="580" loading="lazy" />
+                            </picture>
+                    </div> -->
                     <ul class="slider__controls list">
                         <li class="slider__controls-item">
                             <button class="slider__controls-btn" type="button">Back</button>
@@ -364,7 +416,7 @@
                                     <a class="social-links__link link" href="https://www.instagram.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Instagram">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#instagram"></use>
+                                            <use href="./images/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -372,7 +424,7 @@
                                     <a class="social-links__link link" href="https://twitter.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Twitter">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#twitter"></use>
+                                            <use href="./images/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -380,7 +432,7 @@
                                     <a class="social-links__link link" href="https://www.facebook.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Facebook">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#facebook"></use>
+                                            <use href="./images/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -388,7 +440,7 @@
                                     <a class="social-links__link link" href="https://www.linkedin.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Linkedin">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#linkedin"></use>
+                                            <use href="./images/sprite.svg#linkedin"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -421,7 +473,7 @@
                                     <a class="social-links__link link" href="https://www.instagram.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Instagram">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#instagram"></use>
+                                            <use href="./images/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -429,7 +481,7 @@
                                     <a class="social-links__link link" href="https://twitter.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Twitter">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#twitter"></use>
+                                            <use href="./images/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -437,7 +489,7 @@
                                     <a class="social-links__link link" href="https://www.facebook.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Facebook">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#facebook"></use>
+                                            <use href="./images/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -445,7 +497,7 @@
                                     <a class="social-links__link link" href="https://www.linkedin.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Linkedin">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#linkedin"></use>
+                                            <use href="./images/sprite.svg#linkedin"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -478,7 +530,7 @@
                                     <a class="social-links__link link" href="https://www.instagram.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Instagram">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#instagram"></use>
+                                            <use href="./images/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -486,7 +538,7 @@
                                     <a class="social-links__link link" href="https://twitter.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Twitter">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#twitter"></use>
+                                            <use href="./images/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -494,7 +546,7 @@
                                     <a class="social-links__link link" href="https://www.facebook.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Facebook">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#facebook"></use>
+                                            <use href="./images/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -502,7 +554,7 @@
                                     <a class="social-links__link link" href="https://www.linkedin.com/" target="_blank"
                                         rel="noopener noreferrer" lang="en" aria-label="Linkedin">
                                         <svg class="social-links__icon" width="20" height="20">
-                                            <use href="./images/icons/symbol-defs.svg#linkedin"></use>
+                                            <use href="./images/sprite.svg#linkedin"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -608,7 +660,7 @@
         <section class="contacts section" id="contacts">
             <div class="contacts__container container">
                 <!-- ========= USER CONTACTS FORM ===========-->
-                <div class="contacts__form">
+                <div class="contacts__form" id="book">
                     <h2 class="section-title section-title--mode-light">Book a Service</h2>
                     <form class="form" name="form-contacts" autocomplete="on">
                         <label class="form__field" aria-label="Name">
@@ -620,11 +672,12 @@
                             <span class="form__label">Telephone*</span>
                         </label>
                         <label class="form__field form__field-comment" aria-label="Comment">
-                            <textarea class="form__input" type="text" name="comment" placeholder=" "></textarea>
+                            <textarea class="form__comment" type="text" name="comment" placeholder=" "></textarea>
                             <span class="form__label">Message</span>
                         </label>
-                        <button class="form__btn btn btn--mode-dark" type="submit">send</button>
                     </form>
+                    <button class="form__btn btn btn--mode-dark" type="submit">send</button>
+
                 </div>
                 <!-- ========= CONTACTS COMPANY ===========-->
                 <div class="contacts__group">
@@ -635,7 +688,7 @@
                                 <a class="adress__link link" href="https://goo.gl/maps/EWTb5EmzrJwAVnWu9"
                                     aria-label="address" target="_blank" rel="noopener noreferrer">
                                     <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/icons/symbol-defs.svg#map-pin"></use>
+                                        <use href="./images/sprite.svg#map-pin"></use>
                                     </svg>
                                     Main Street, 7A, Kyiv, 08132
                                 </a>
@@ -643,7 +696,7 @@
                             <li class="address__item">
                                 <a class="adress__link link" href="tel:+380441111111" aria-label="phone">
                                     <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/icons/symbol-defs.svg#phone"></use>
+                                        <use href="./images/sprite.svg#phone"></use>
                                     </svg>
                                     +38 044 111 11 11
                                 </a>
@@ -651,7 +704,7 @@
                             <li class="address__item">
                                 <a class="adress__link link" href="mailto:barbershop@email.com" aria-label="email">
                                     <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/icons/symbol-defs.svg#mail"></use>
+                                        <use href="./images/sprite.svg#mail"></use>
                                     </svg>
                                     barbershop@email.com
                                 </a>
@@ -685,13 +738,13 @@
     </footer>
     <a class="scroll-to-top" href="#hero">
         <svg class="arrow-top" width="20" height="20">
-            <use href="./images/icons/symbol-defs.svg#arrow-up"></use>
+            <use href="./images/sprite.svg#arrow-up"></use>
         </svg>
     </a>
 
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/slider.js"></script>
+    <!-- <script src="./js/slider.js"></script> -->
     <script src="./js/header-scroll.js"></script>
 
     <!-- ======= AOS aniamtion library ======= -->

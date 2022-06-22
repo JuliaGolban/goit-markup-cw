@@ -122,6 +122,9 @@
 }
 
 .price__inner-item {
+    display: flex;
+    align-items: baseline;
+
     font-size: 14px;
     line-height: 2.14;
 

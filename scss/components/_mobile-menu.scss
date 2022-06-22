@@ -5,8 +5,11 @@
     right: 0;
     z-index: 11;
 
-    height: 100%;
-    padding: 48px 40px;
+    max-width: 337px;
+    height: 100vh;
+    padding-top: 118px;
+    padding-right: 105px;
+    padding-left: 40px;
 
     display: flex;
     flex-direction: column;
@@ -141,26 +144,29 @@
 .mobile-menu__socials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-}
+    justify-content: flex-end;
 
-.mobile-menu__socials-item {
-    font-weight: 500;
-    @include font-size(18);
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: var(--color-accent);
-
-    &:not(:first-child) {
-        padding-left: 10px;
+    &::before {
+        margin-bottom: 24px;
     }
 
-    &:not(:last-child) {
-        padding-right: 10px;
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
-    }
+    & .socials__item {
+        &:first-child {
+            margin-right: 0;
+        }
 
-    @include mq(mobile) {
-        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        & .socials__link {
+            font-weight: 600;
+            @include font-size(14);
+            line-height: 1.36;
+
+            @include mq(mobile) {
+                font-size: 14px;
+            }
+        }
     }
 }
