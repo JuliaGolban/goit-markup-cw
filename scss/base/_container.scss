@@ -6,16 +6,14 @@
 
 
     @include mq(mobile) {
-        width: $mobile;
+        width: 418px;
     }
 
     @include mq(tablet) {
-        width: $tablet;
-        padding: 0 39px;
+        width: 690px;
     }
 
     @include mq(desktop) {
-        width: $desktop;
-        padding: 0 55px;
+        width: 1200px;
     }
 }

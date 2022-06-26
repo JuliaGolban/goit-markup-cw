@@ -28,10 +28,13 @@
 // ========== logo ==========
 
 .logo {
-    margin-top: 35px;
+    position: absolute;
+    top: 35px;
+    left: 40px;
     fill: var(--color-text-white);
 
     @include mq(tablet) {
+        position: static;
         margin-top: 25px;
         fill: currentColor;
     }
