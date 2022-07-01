@@ -53,6 +53,7 @@
 }
 
 .hero__container {
+    @extend %no-padding;
     position: relative;
     display: flex;
     width: 100%;

@@ -38,8 +38,7 @@
             <nav class="navigation">
                 <ul class="navigation__list list">
                     <li class="navigation__item">
-                        <a class="navigation__link link navigation__link--current" href="#about"
-                            aria-label="About">About</a>
+                        <a class="navigation__link link" href="#about" aria-label="About">About</a>
                     </li>
                     <li class="navigation__item">
                         <a class="navigation__link link" href="#price" aria-label="Services and Prices">Services and
@@ -57,11 +56,18 @@
                 <a class="header__phone link" href="tel:+380441111111" aria-label="phone">+38 044 111 11 11</a>
                 <button class="btn btn--mode-dark" type="button" data-modal-open>book a service</button>
             </div>
+            <button class="mobile-btn" type="button" aria-label="Switch mobile menu" aria-expanded="false"
+                aria-controls="mobile-menu" data-menu-button>
+                <svg class="mobile-btn__icon" width="40" height="40">
+                    <use class="mobile-btn__icon-open" href="./images/sprite.svg#menu_40px"></use>
+                    <use class="mobile-btn__icon-close" href="./images/sprite.svg#close_40px"></use>
+                </svg>
+            </button>
         </div>
         <!-- ========= MOBILE MENU ===========-->
         <div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
             <nav class="mobile-menu__navigation">
-                <ul class="mobile-menu__navigation-list list">
+                <ul class="mobile-menu__navigation-list list js-menu-links">
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#about" aria-label="About">About</a>
                     </li>
@@ -88,13 +94,6 @@
                 </li>
             </ul>
         </div>
-        <button class="mobile-btn" type="button" aria-label="Switch mobile menu" aria-expanded="false"
-            aria-controls="mobile-menu" data-menu-button>
-            <svg class="mobile-btn__icon" width="40" height="40">
-                <use class="mobile-btn__icon-open" href="./images/sprite.svg#menu_40px"></use>
-                <use class="mobile-btn__icon-close" href="./images/sprite.svg#close_40px"></use>
-            </svg>
-        </button>
     </header>
     <!-- ==== MODAL WINDOW ==== -->
     <div class="backdrop is-hidden" data-modal>
@@ -735,11 +734,15 @@
             </ul>
         </div>
     </footer>
-    <a class="scroll-to-top" href="#hero">
-        <svg class="arrow-top" width="20" height="20">
-            <use href="./images/sprite.svg#arrow-up"></use>
-        </svg>
-    </a>
+    <div class="fix-down">
+        <div class="container">
+            <a class="scroll-to-top" href="#hero">
+                <svg class="arrow-top" width="20" height="20">
+                    <use href="./images/sprite.svg#arrow-up"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

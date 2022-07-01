@@ -5,8 +5,9 @@
     right: 0;
     z-index: 11;
 
-    max-width: 337px;
+    width: 100%;
     height: 100vh;
+
     padding-top: 118px;
     padding-right: 105px;
     padding-left: 40px;
@@ -19,13 +20,17 @@
 
     background-color: var(--color-background-main);
 
-    visibility: hidden;
+    // visibility: hidden;
     overflow-y: scroll;
 
     &.is-open {
         visibility: visible;
         transform: translateX(0);
         transition: transform var(--animation);
+    }
+
+    @include mq(mobile) {
+        width: 337px;
     }
 
     @include mq(desktop) {
@@ -39,9 +44,6 @@
 
 // mobile button
 .mobile-btn {
-    position: absolute;
-    top: 48px;
-    right: 31px;
     z-index: 11;
 
     display: flex;
@@ -66,7 +68,9 @@
 
     &.is-open {
         position: fixed;
-        overflow-y: scroll;
+        top: 20px;
+        right: 31px;
+        z-index: 12;
     }
 
     @include mq(desktop) {
@@ -91,6 +95,8 @@
 
     .mobile-btn.is-open & {
         position: fixed;
+        top: 48px;
+        right: 31px;
         display: block;
     }
 }
@@ -146,6 +152,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    width: 192px;
 
     &::before {
         margin-bottom: 24px;
@@ -162,12 +169,8 @@
 
         & .socials__link {
             font-weight: 600;
-            @include font-size(14);
+            font-size: 14px;
             line-height: 1.36;
-
-            @include mq(mobile) {
-                font-size: 14px;
-            }
         }
     }
 }

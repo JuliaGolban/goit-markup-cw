@@ -1,11 +1,20 @@
-.scroll-to-top {
+.fix-down {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
 
+    & .container {
+        padding-right: 0;
+    }
+}
+
+.scroll-to-top {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-left: auto;
 
     width: 25px;
     height: 25px;
@@ -18,7 +27,7 @@
     animation: slide-top 1s linear 2s infinite alternate both;
 
     @include mq(tablet) {
-        bottom: 50px;
+        margin-bottom: 50px;
         width: 50px;
         height: 50px;
     }
