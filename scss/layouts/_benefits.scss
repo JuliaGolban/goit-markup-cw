@@ -22,9 +22,11 @@
     justify-content: center;
     gap: 30px;
 
+    @include mq(mobile) {
+        gap: 0;
+    }
 
     @include mq(tablet) {
-        gap: 0;
         max-width: 450px;
     }
 
