@@ -13,6 +13,10 @@
 
     & .socials {
         padding-bottom: 35px;
+
+        @include mq(tablet) {
+            padding-bottom: 0;
+        }
     }
 }
 
