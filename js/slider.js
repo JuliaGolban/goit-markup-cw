@@ -1,21 +1,32 @@
-(() => {
-  const controls = document.querySelector('.controls');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-  controls.addEventListener('click', e => {
-    if (e.target === e.currentTarget) {
-      return;
-    }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
 
-    e.preventDefault();
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
 
-    const prevActivePane = document.querySelector('.slide.is-active');
-
-    if (prevActivePane) {
-      prevActivePane.classList.remove('is-active');
-    }
-
-    const paneId = e.target.getAttribute('href').slice(1);
-    const nextActivePane = document.querySelector(`#${slideId}`);
-    nextActivePane.classList.add('is-active');
-  });
-})();
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName('slide');
+  let dots = document.getElementsByClassName('slider__item');
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i += 1) {
+    slides[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i += 1) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' active';
+}
