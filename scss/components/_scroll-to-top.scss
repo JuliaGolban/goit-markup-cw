@@ -5,8 +5,13 @@
     width: 100vw;
 
     & .container {
-        padding-right: 0;
-        padding-bottom: 10px;
+        width: 100%;
+        padding-right: 15px;
+        padding-bottom: 15px;
+
+        @include mq(desktop) {
+            max-width: 1300px;
+        }
     }
 }
 

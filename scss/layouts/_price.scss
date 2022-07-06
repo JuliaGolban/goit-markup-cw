@@ -103,11 +103,16 @@
 
 .price__inner-list {
     padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     &:not(:last-child) {
         padding-bottom: 30px;
+    }
+
+    @include mq(tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     @include mq(desktop) {

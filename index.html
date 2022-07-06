@@ -67,7 +67,7 @@
         <!-- ========= MOBILE MENU ===========-->
         <div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
             <nav class="mobile-menu__navigation">
-                <ul class="mobile-menu__navigation-list list js-menu-links">
+                <ul class="mobile-menu__navigation-list list" data-menu-links>
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#about" aria-label="About">About</a>
                     </li>
@@ -84,7 +84,7 @@
                 </ul>
             </nav>
             <a class="contacts__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="btn btn--mode-light" type="button" href="#book">book a service</button>
+            <button class="btn btn--mode-light" type="button" href="#book" mobile-modal-open>book a service</button>
             <ul class="mobile-menu__socials socials list">
                 <li class="socials__item"><a class="socials__link link" href="https://www.instagram.com/"
                         target="_blank" rel="noreferrer noopener">Instagram</a>
@@ -96,9 +96,9 @@
         </div>
     </header>
     <!-- ==== MODAL WINDOW ==== -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal mobile-modal>
         <div class="modal">
-            <button class="modal__btn-close" aria-label="Close" data-modal-close>
+            <button class="modal__btn-close" aria-label="Close" data-modal-close mobile-modal-close>
                 <svg class="modal__icon" width="40" height="40">
                     <use href="./images/sprite.svg#close_40px"></use>
                 </svg>
@@ -158,86 +158,6 @@
         <!-- =========== HERO SECTION ============= -->
         <section class="hero" id="hero">
             <div class="hero__container container">
-                <div class="hero__group title-group">
-                    <p class="uppertitle uppertitle--mode-light">A hair salon for men in Kyiv</p>
-                    <h1 class="main-tittle">BarberShop</h1>
-                    <p class="subtitle subtitle--mode-light">We are experts in trendy men's haircuts.
-                        We work quickly, carefully, and tastefully.</p>
-                </div>
-                <!-- ========= SLIDER ===========-->
-                <div class="slider">
-                    <ul class="slider__pagination list">
-                        <li class="slider__item slider__item--active"><a href="#slide-1"></a></li>
-                        <li class="slider__item"><a href="#slide-2"></a></li>
-                        <li class="slider__item"><a href="#slide-3"></a></li>
-                    </ul>
-                    <!-- <div class="slides">
-                        <picture id="slide-1">
-                            <source media="(min-width:1280px)"
-                                srcset="./images/slider/slider-1-desk.webp 1x, ./images/slider/slider-1-desk@2x.webp 2x"
-                                type="image/webp" />
-                            <source media="(min-width:768px)"
-                                srcset="./images/slider/slider-1-tab.webp 1x, ./images/slider/slider-1-tab@2x.webp 2x"
-                                type="image/webp" />
-                            <source media="(max-width:767px)"
-                                srcset="./images/slider/slider-1-mob.webp 1x, ./images/slider/slider-1-mob@2x.webp 2x"
-                                type="image/webp" />
-                            <img class="team__image"
-                                srcset="./images/slider/slider-1-mob.jpg 480w, ./images/slider/slider-1-mob@2x.jpg 960w,
-                                        ./images/slider/slider-1-tab.jpg 609w, ./images/slider/slider-1-tab@2x.jpg 1218w,
-                                        ./images/slider/slider-1-desk.jpg 1125w, ./images/slider/slider-1-desk@2x.jpg 2250w"
-                                src="./images/slider/slider-1-mob.jpg" alt="Beard trim"
-                                sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
-                                width="480" height="580" loading="lazy" />
-                        </picture>
-                        <picture id="slide-2">
-                            <picture id="slide-2">
-                                <source media="(min-width:1280px)"
-                                    srcset="./images/slider/slider-2-desk.webp 1x, ./images/slider/slider-2-desk@2x.webp 2x"
-                                    type="image/webp" />
-                                <source media="(min-width:768px)"
-                                    srcset="./images/slider/slider-2-tab.webp 1x, ./images/slider/slider-2-tab@2x.webp 2x"
-                                    type="image/webp" />
-                                <source media="(max-width:767px)"
-                                    srcset="./images/slider/slider-2-mob.webp 1x, ./images/slider/slider-2-mob@2x.webp 2x"
-                                    type="image/webp" />
-                                <img class="team__image"
-                                    srcset="./images/slider/slider-2-mob.jpg 480w, ./images/slider/slider-2-mob@2x.jpg 960w,
-                                            ./images/slider/slider-2-tab.jpg 609w, ./images/slider/slider-2-tab@2x.jpg 1218w,
-                                            ./images/slider/slider-2-desk.jpg 1125w, ./images/slider/slider-2-desk@2x.jpg 2250w"
-                                    src="./images/slider/slider-2-mob.jpg" alt="Beard trim"
-                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
-                                    width="480" height="580" loading="lazy" />
-                            </picture>
-                            <picture id="slide-3">
-                                <source media="(min-width:1280px)"
-                                    srcset="./images/slider/slider-3-desk.webp 1x, ./images/slider/slider-3-desk@2x.webp 2x"
-                                    type="image/webp" />
-                                <source media="(min-width:768px)"
-                                    srcset="./images/slider/slider-3-tab.webp 1x, ./images/slider/slider-3-tab@2x.webp 2x"
-                                    type="image/webp" />
-                                <source media="(max-width:767px)"
-                                    srcset="./images/slider/slider-3-mob.webp 1x, ./images/slider/slider-3-mob@2x.webp 2x"
-                                    type="image/webp" />
-                                <img class="team__image"
-                                    srcset="./images/slider/slider-3-mob.jpg 480w, ./images/slider/slider-3-mob@2x.jpg 960w,
-                                            ./images/slider/slider-3-tab.jpg 609w, ./images/slider/slider-3-tab@2x.jpg 1218w,
-                                            ./images/slider/slider-3-desk.jpg 1125w, ./images/slider/slider-3-desk@2x.jpg 2250w"
-                                    src="./images/slider/slider-3-mob.jpg" alt="Beard trim"
-                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
-                                    width="480" height="580" loading="lazy" />
-                            </picture>
-                    </div> -->
-                    <ul class="slider__controls list">
-                        <li class="slider__controls-item">
-                            <button class="slider__controls-btn" type="button">Back</button>
-                        </li>
-                        <li class="slider__controls-item">
-                            <button class="slider__controls-btn slider__controls-btn--forward"
-                                type="button">Next</button>
-                        </li>
-                    </ul>
-                </div>
                 <!-- ========= SIDEBAR ===========-->
                 <div class="sidebar">
                     <ul class="socials list">
@@ -248,6 +168,90 @@
                         <li class="socials__item">
                             <a class="socials__link link" href="htts://www.youtube.com" target="_blank"
                                 rel="noreferrer noopener">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ========= TITLE GROUP ========= -->
+                <div class="hero__group title-group">
+                    <p class="uppertitle uppertitle--mode-light">A hair salon for men in Kyiv</p>
+                    <h1 class="main-tittle">BarberShop</h1>
+                    <p class="subtitle subtitle--mode-light">We are experts in trendy men's haircuts.
+                        We work quickly, carefully, and tastefully.</p>
+                </div>
+                <!-- ========= SLIDER ===========-->
+                <div class="hero_slider slider">
+                    <ul class="slider__pagination list">
+                        <li class="slider__item"><a href="#slide1" onclick="currentSlide(1)"></a>
+                        </li>
+                        <li class="slider__item"><a href="#slide2" onclick="currentSlide(2)"></a></li>
+                        <li class="slider__item"><a href="#slide3" onclick="currentSlide(3)"></a></li>
+                    </ul>
+                    <div class="slides">
+                        <div class="slide fade" id="slide1">
+                            <picture class="slide__img">
+                                <source media="(min-width:1280px)"
+                                    srcset="./images/slider/slider-1-desk.webp 1x, ./images/slider/slider-1-desk@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)"
+                                    srcset="./images/slider/slider-1-tab.webp 1x, ./images/slider/slider-1-tab@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width:767px)"
+                                    srcset="./images/slider/slider-1-mob.webp 1x, ./images/slider/slider-1-mob@2x.webp 2x"
+                                    type="image/webp" />
+                                <img srcset="./images/slider/slider-1-mob.jpg 480w, ./images/slider/slider-1-mob@2x.jpg 960w,
+                                        ./images/slider/slider-1-tab.jpg 609w, ./images/slider/slider-1-tab@2x.jpg 1218w,
+                                        ./images/slider/slider-1-desk.jpg 1125w, ./images/slider/slider-1-desk@2x.jpg 2250w"
+                                    src="./images/slider/slider-1-mob.jpg" alt="Beard trim"
+                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                    loading="lazy" />
+                            </picture>
+                        </div>
+                        <div class="slide fade" id="slide2">
+                            <picture class="slide__img">
+                                <source media="(min-width:1280px)"
+                                    srcset="./images/slider/slider-2-desk.webp 1x, ./images/slider/slider-2-desk@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)"
+                                    srcset="./images/slider/slider-2-tab.webp 1x, ./images/slider/slider-2-tab@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width:767px)"
+                                    srcset="./images/slider/slider-2-mob.webp 1x, ./images/slider/slider-2-mob@2x.webp 2x"
+                                    type="image/webp" />
+                                <img srcset="./images/slider/slider-2-mob.jpg 480w, ./images/slider/slider-2-mob@2x.jpg 960w,
+                                            ./images/slider/slider-2-tab.jpg 609w, ./images/slider/slider-2-tab@2x.jpg 1218w,
+                                            ./images/slider/slider-2-desk.jpg 1125w, ./images/slider/slider-2-desk@2x.jpg 2250w"
+                                    src="./images/slider/slider-2-mob.jpg" alt="Beard trim"
+                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                    loading="lazy" />
+                            </picture>
+                        </div>
+                        <div class="slide fade" id="slide3">
+                            <picture class="slide__img">
+                                <source media="(min-width:1280px)"
+                                    srcset="./images/slider/slider-3-desk.webp 1x, ./images/slider/slider-3-desk@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)"
+                                    srcset="./images/slider/slider-3-tab.webp 1x, ./images/slider/slider-3-tab@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width:767px)"
+                                    srcset="./images/slider/slider-3-mob.webp 1x, ./images/slider/slider-3-mob@2x.webp 2x"
+                                    type="image/webp" />
+                                <img srcset="./images/slider/slider-3-mob.jpg 480w, ./images/slider/slider-3-mob@2x.jpg 960w,
+                                            ./images/slider/slider-3-tab.jpg 609w, ./images/slider/slider-3-tab@2x.jpg 1218w,
+                                            ./images/slider/slider-3-desk.jpg 1125w, ./images/slider/slider-3-desk@2x.jpg 2250w"
+                                    src="./images/slider/slider-3-mob.jpg" alt="Beard trim"
+                                    sizes="(min-width:1280px) 1125px, (min-width:768px) 609px, (max-width:767px) 480px, 100vw"
+                                    loading="lazy" />
+                            </picture>
+                        </div>
+                    </div>
+                    <ul class="slider__controls list">
+                        <li class="slider__controls-item">
+                            <a class="slider__controls-btn" onclick="plusSlides(-1)">Back</a>
+                        </li>
+                        <li class="slider__controls-item">
+                            <a class="slider__controls-btn slider__controls-btn--forward"
+                                onclick="plusSlides(1)">Next</a>
                         </li>
                     </ul>
                 </div>
@@ -300,7 +304,7 @@
                             team that is always on the same wavelength with clients.
                             Therefore, we are always ready to improve everyone who comes to us!</p>
                     </div>
-                    <button class="btn btn--mode-light" type="button" href="#contacts">book a Service</button>
+                    <a class="link btn btn--mode-light" href="#contacts">book a Service</a>
                 </div>
             </div>
         </section>
@@ -346,7 +350,7 @@
                         </ul>
                     </li>
                 </ul>
-                <button class="price__btn btn btn--mode-dark" type="button">book a Service</button>
+                <a class="link btn btn--mode-dark" href="#contacts">book a Service</a>
             </div>
         </section>
 
@@ -746,7 +750,8 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-    <!-- <script src="./js/slider.js"></script> -->
+    <script src="./js/mobile-modal.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/header-scroll.js"></script>
 
     <!-- ======= AOS aniamtion library ======= -->

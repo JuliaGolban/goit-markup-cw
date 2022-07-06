@@ -1,7 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
-  const menuLinks = document.querySelector('.js-menu-links');
+  const menuLinks = document.querySelector('[data-menu-links]');
 
   const toggleMenu = () => {
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
