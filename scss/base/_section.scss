@@ -29,6 +29,8 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
+    animation: expand 0.6s ease-in;
+
     &::before {
         display: block;
         content: " ";

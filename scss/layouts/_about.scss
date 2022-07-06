@@ -19,6 +19,8 @@
 }
 
 .about__item {
+    overflow: hidden;
+    animation: fade-left-to-right 1s ease-out;
 
     &:not(:last-child) {
         margin-bottom: 30px;
@@ -34,9 +36,16 @@
             margin-bottom: 0;
         }
     }
+
+    &:hover .about__image,
+    &:focus .about__image {
+        transform: scale(1.15);
+    }
 }
 
 .about__image {
+    transition: transform var(--slow-anim);
+
     @include mq(tablet) {
         min-width: 330px;
         height: 235px;
@@ -46,4 +55,5 @@
         min-width: 270px;
         height: 445px;
     }
+
 }
