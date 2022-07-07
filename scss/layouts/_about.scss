@@ -20,7 +20,6 @@
 
 .about__item {
     overflow: hidden;
-    animation: fade-left-to-right 1s ease-out;
 
     &:not(:last-child) {
         margin-bottom: 30px;

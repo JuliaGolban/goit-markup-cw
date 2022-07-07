@@ -84,7 +84,7 @@
                 </ul>
             </nav>
             <a class="contacts__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="btn btn--mode-light" type="button" href="#book" mobile-modal-open>book a service</button>
+            <button class="btn btn--mode-light" type="button" mobile-modal-open>book a service</button>
             <ul class="mobile-menu__socials socials list">
                 <li class="socials__item"><a class="socials__link link" href="https://www.instagram.com/"
                         target="_blank" rel="noreferrer noopener">Instagram</a>
@@ -449,7 +449,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item" data-aos="zoom-in-up" data-aos-delay="400">
+                    <li class="team__item" data-aos="zoom-in-up" data-aos-delay="300">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/team/member-2-desk.webp 1x, ./images/team/member-2-desk@2x.webp 2x"
@@ -506,7 +506,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item" data-aos="zoom-in-up" data-aos-delay="600">
+                    <li class="team__item" data-aos="zoom-in-up" data-aos-delay="400">
                         <picture>
                             <source media="(min-width:1280px)"
                                 srcset="./images/team/member-3-desk.webp 1x, ./images/team/member-3-desk@2x.webp 2x"
@@ -567,8 +567,8 @@
             </div>
         </section>
 
-        <!-- =========== PORTFOLIO SECTION ============= -->
-        <section class="gallery section" id="portfolio">
+        <!-- =========== GALLERY SECTION ============= -->
+        <section class="gallery section" id="gallery">
             <div class="container">
                 <div class="gallery__group title-group">
                     <p class="uppertitle">In Latin, "barba" means "beard"</p>
@@ -666,15 +666,16 @@
                     <h2 class="section-title section-title--mode-light">Book a Service</h2>
                     <form class="form" name="form-contacts" autocomplete="on">
                         <label class="form__field" aria-label="Name">
-                            <input class="form__input" type="text" name="username" required placeholder=" ">
+                            <input class="form__input" type="text" name="user-name" required placeholder="John">
                             <span class="form__label">Name*</span>
                         </label>
                         <label class="form__field" aria-label="Phone">
-                            <input class="form__input" type="tel" name="phone" required placeholder=" ">
+                            <input class="form__input" type="tel" name="user-phone" required placeholder="+19739476185">
                             <span class="form__label">Telephone*</span>
                         </label>
                         <label class="form__field form__field-comment" aria-label="Comment">
-                            <textarea class="form__comment" type="text" name="comment" placeholder=" "></textarea>
+                            <textarea class="form__comment" type="text" name="comment"
+                                placeholder="Your comment"></textarea>
                             <span class="form__label">Message</span>
                         </label>
                     </form>
@@ -684,38 +685,40 @@
                 <!-- ========= CONTACTS COMPANY ===========-->
                 <div class="contacts__group">
                     <h2 class="section-title section-title--mode-light">Contacts</h2>
-                    <address class="address">
-                        <ul class="address__list list">
-                            <li class="address__item">
-                                <a class="adress__link link" href="https://goo.gl/maps/EWTb5EmzrJwAVnWu9"
-                                    aria-label="address" target="_blank" rel="noopener noreferrer">
-                                    <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/sprite.svg#map-pin"></use>
-                                    </svg>
-                                    Main Street, 7A, Kyiv, 08132
-                                </a>
-                            </li>
-                            <li class="address__item">
-                                <a class="adress__link link" href="tel:+380441111111" aria-label="phone">
-                                    <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/sprite.svg#phone"></use>
-                                    </svg>
-                                    +38 044 111 11 11
-                                </a>
-                            </li>
-                            <li class="address__item">
-                                <a class="adress__link link" href="mailto:barbershop@email.com" aria-label="email">
-                                    <svg class="address__icon" width="24" height="24">
-                                        <use href="./images/sprite.svg#mail"></use>
-                                    </svg>
-                                    barbershop@email.com
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
-                    <div class="worktime">
-                        <p class="uppertitle uppertitle--mode-light">working hours</p>
-                        <p class="subtitle subtitle--mode-light">Daily from 9:00 AM till 22:00 PM</p>
+                    <div class="contacts__wrapper">
+                        <address class="address">
+                            <ul class="address__list list">
+                                <li class="address__item">
+                                    <a class="adress__link link" href="https://goo.gl/maps/EWTb5EmzrJwAVnWu9"
+                                        aria-label="address" target="_blank" rel="noopener noreferrer">
+                                        <svg class="address__icon" width="24" height="24">
+                                            <use href="./images/sprite.svg#map-pin"></use>
+                                        </svg>
+                                        Main Street, 7A, Kyiv, 08132
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="adress__link link" href="tel:+380441111111" aria-label="phone">
+                                        <svg class="address__icon" width="24" height="24">
+                                            <use href="./images/sprite.svg#phone"></use>
+                                        </svg>
+                                        +38 044 111 11 11
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="adress__link link" href="mailto:barbershop@email.com" aria-label="email">
+                                        <svg class="address__icon" width="24" height="24">
+                                            <use href="./images/sprite.svg#mail"></use>
+                                        </svg>
+                                        barbershop@email.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <div class="worktime">
+                            <p class="uppertitle uppertitle--mode-light">working hours</p>
+                            <p class="subtitle subtitle--mode-light">Daily from 9:00 AM till 22:00 PM</p>
+                        </div>
                     </div>
                 </div>
             </div>

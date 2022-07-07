@@ -186,19 +186,20 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 448px;
+    padding: 0;
+    width: 418px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 690px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 
@@ -1250,7 +1251,7 @@ body {
 }
 
 .header.js-no-transparency {
-  background-color: rgba(25, 28, 38, 0.3);
+  background-color: rgba(25, 28, 38, 0.4);
 }
 
 .header.js-no-transparency .mobile-btn {
@@ -1258,7 +1259,8 @@ body {
 }
 
 .header.js-no-transparency .logo {
-  margin-top: 20px;
+  margin-top: 10px;
+  fill: var(--color-text-white);
 }
 
 .header .btn {
@@ -1282,7 +1284,7 @@ body {
 }
 
 .logo {
-  margin-top: 20px;
+  margin-top: 10px;
   fill: var(--color-text-white);
 }
 
@@ -1572,8 +1574,6 @@ body {
 
 .about__item {
   overflow: hidden;
-  -webkit-animation: fade-left-to-right 1s ease-out;
-          animation: fade-left-to-right 1s ease-out;
 }
 
 .about__item:not(:last-child) {
@@ -2113,10 +2113,10 @@ body {
 .contacts {
   width: 100%;
   height: 100%;
-  background-color: #191C26;
+  background-color: var(--color-background-accent);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: calc(50vw + 220px);
+  background-size: 100% 45%, cover;
+  background-position: bottom right;
   background-image: url(../images/contacts/bg-contacts-mob.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
   background-image: url(../images/contacts/bg-contacts-mob.png), linear-gradient(to bottom, #191c26, #191c26);
   background-image: -webkit-image-set(url(../images/contacts/bg-contacts-mob.webp) 1x);
@@ -2130,9 +2130,15 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .contacts {
+    background-size: 100% 496px, cover;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contacts {
-    background-position-y: calc(50% + 240px);
+    background-size: 100% 449px, cover;
     background-image: url(../images/contacts/bg-contacts-tab.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
     background-image: url(../images/contacts/bg-contacts-tab.png), linear-gradient(to bottom, #191c26, #191c26);
     background-image: -webkit-image-set(url(../images/contacts/bg-contacts-tab.webp) 1x);
@@ -2151,6 +2157,7 @@ body {
   .contacts {
     max-width: 1280px;
     background-position: bottom right;
+    background-size: 625px 644px, contain;
     background-image: url(../images/contacts/bg-contacts-desk.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
     background-image: url(../images/contacts/bg-contacts-desk.png), linear-gradient(to bottom, #191c26, #191c26);
     background-image: -webkit-image-set(url(../images/contacts/bg-contacts-desk.webp) 1x);
@@ -2177,12 +2184,19 @@ body {
 }
 
 .contacts__form {
-  margin-bottom: 84px;
   text-align: center;
+  margin-bottom: 84px;
 }
 
 .contacts__form .section-title {
   margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__form {
+    text-align: left;
+    margin-bottom: 200px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -2204,17 +2218,13 @@ body {
 }
 
 .contacts__form .form__field {
+  position: relative;
   margin-bottom: 44px;
+  padding-top: 20px;
 }
 
-.contacts__form .form__label {
-  margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.4);
+.contacts__form .form__field:first-of-type {
+  margin-right: 30px;
 }
 
 .contacts__form .form__input {
@@ -2232,6 +2242,8 @@ body {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  -webkit-transition: border-color var(--animation);
+  transition: border-color var(--animation);
 }
 
 @media screen and (min-width: 480px) {
@@ -2244,9 +2256,6 @@ body {
   .contacts__form .form__input {
     width: 330px;
   }
-  .contacts__form .form__input:first-child {
-    margin-right: 30px;
-  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -2255,55 +2264,101 @@ body {
   }
 }
 
-.contacts__form .form__input:first-child {
-  margin-right: 30px;
-}
-
 .contacts__form .form__input:hover, .contacts__form .form__input:focus, .contacts__form .form__input:active {
   outline: 0;
   border-bottom: 1px solid var(--color-text-white);
 }
 
+.contacts__form .form__input::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__input:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__input::-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__input::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__input:focus::placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__input:hover ~ .form__label,
+.contacts__form .form__input:focus ~ .form__label,
+.contacts__form .form__input:not(:placeholder-shown) ~ .form__label {
+  color: var(--color-text-white);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.contacts__form .form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: -webkit-transform var(--slow-anim);
+  transition: -webkit-transform var(--slow-anim);
+  transition: transform var(--slow-anim);
+  transition: transform var(--slow-anim), -webkit-transform var(--slow-anim);
+}
+
 .contacts__form .form__comment {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% - 62px);
+  width: 100%;
   height: 52px;
   resize: none;
-  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-right: 0;
+  padding-left: 0;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.01em;
   color: var(--color-text-white);
+  outline: transparent;
   background-color: transparent;
+  border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   border-radius: 4px;
   -webkit-transition: border-color var(--animation);
   transition: border-color var(--animation);
-}
-
-.contacts__form .form__comment:hover, .contacts__form .form__comment:focus, .contacts__form .form__comment:active {
-  outline: 0;
-  border: none;
-  border-bottom: 1px solid var(--color-text-white);
-}
-
-.contacts__form .form__comment::-webkit-input-placeholder {
-  color: rgba(157, 164, 189, 0.4);
-}
-
-.contacts__form .form__comment:-ms-input-placeholder {
-  color: rgba(157, 164, 189, 0.4);
-}
-
-.contacts__form .form__comment::-ms-input-placeholder {
-  color: rgba(157, 164, 189, 0.4);
-}
-
-.contacts__form .form__comment::placeholder {
-  color: rgba(157, 164, 189, 0.4);
 }
 
 @media screen and (min-width: 480px) {
@@ -2324,12 +2379,77 @@ body {
   }
 }
 
+.contacts__form .form__comment:hover, .contacts__form .form__comment:focus, .contacts__form .form__comment:active {
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid var(--color-text-white);
+}
+
+.contacts__form .form__comment::-webkit-input-placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__comment:-ms-input-placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__comment::-ms-input-placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__comment::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity var(--animation);
+  transition: opacity var(--animation);
+}
+
+.contacts__form .form__comment:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__comment:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__comment:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__comment:focus::placeholder {
+  opacity: 1;
+}
+
+.contacts__form .form__comment:hover ~ .form__label,
+.contacts__form .form__comment:focus ~ .form__label,
+.contacts__form .form__comment:not(:placeholder-shown) ~ .form__label {
+  color: var(--color-text-white);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .contacts__group {
-  text-align: center;
+  text-align: left;
 }
 
 .contacts__group .section-title {
+  text-align: center;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__group .section-title {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -2340,10 +2460,35 @@ body {
   }
 }
 
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .address {
+  display: inline-block;
   margin-bottom: 44px;
   font-style: inherit;
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .address {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .address {
+    margin-bottom: 70px;
+  }
 }
 
 .address__item {
@@ -2370,6 +2515,10 @@ body {
   fill: currentColor;
 }
 
+.worktime {
+  display: inline-block;
+}
+
 .worktime .uppertitle {
   font-weight: 600;
   font-size: 11px;
@@ -2379,7 +2528,12 @@ body {
   color: var(--color-text-white);
 }
 
+.worktime .uppertitle::before {
+  color: var(--color-text-light);
+}
+
 .worktime .subtitle {
+  margin-bottom: 0;
   text-align: left;
 }
 

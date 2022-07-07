@@ -4,14 +4,15 @@
     padding: 0 15px;
 
     @include mq(mobile) {
-        width: 448px;
+        padding: 0;
+        width: 418px;
     }
 
     @include mq(tablet) {
-        width: 720px;
+        width: 690px;
     }
 
     @include mq(desktop) {
-        width: 1200px;
+        width: 1170px;
     }
 }
