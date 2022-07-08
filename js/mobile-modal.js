@@ -1,9 +1,9 @@
 // ========= mobile menu modal window =========
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[mobile-modal-open]'),
-    // closeModalBtn: document.querySelector('[mobile-modal-close]'),
-    modal: document.querySelector('[mobile-modal]'),
+    openModalBtn: document.querySelector('.js-mobile-modal-open'),
+    // closeModalBtn: document.querySelector('.js-mobile-modal-close'),
+    modal: document.querySelector('.js-mobile-modal'),
     body: document.querySelector('#body'),
   };
 

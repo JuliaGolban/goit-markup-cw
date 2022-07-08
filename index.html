@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbershop. We do what is best for you" />
     <title>Barbershop</title>
 
     <!-- ======= Project fonts ======= -->
@@ -31,7 +32,7 @@
     <header class="header" id="header">
         <div class="header__container container">
             <a class="link" href="./index.html" aria-label="logo company">
-                <svg class="logo" alt="logo BarberShop" width="69" height="56">
+                <svg class="logo" width="69" height="56">
                     <use href="./images/sprite.svg#logo"></use>
                 </svg>
             </a>
@@ -54,10 +55,10 @@
             </nav>
             <div class="header__group">
                 <a class="header__phone link" href="tel:+380441111111" aria-label="phone">+38 044 111 11 11</a>
-                <button class="btn btn--mode-dark" type="button" data-modal-open>book a service</button>
+                <button class="btn btn--mode-dark js-modal-open" type="button">book a service</button>
             </div>
-            <button class="mobile-btn" type="button" aria-label="Switch mobile menu" aria-expanded="false"
-                aria-controls="mobile-menu" data-menu-button>
+            <button class="mobile-btn js-mobile-menu-button" type="button" aria-label="Switch mobile menu"
+                aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="mobile-btn__icon" width="40" height="40">
                     <use class="mobile-btn__icon-open" href="./images/sprite.svg#menu_40px"></use>
                     <use class="mobile-btn__icon-close" href="./images/sprite.svg#close_40px"></use>
@@ -65,9 +66,9 @@
             </button>
         </div>
         <!-- ========= MOBILE MENU ===========-->
-        <div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
+        <div class="header__mobile-menu mobile-menu js-mobile-menu" id="mobile-menu">
             <nav class="mobile-menu__navigation">
-                <ul class="mobile-menu__navigation-list list" data-menu-links>
+                <ul class="mobile-menu__navigation-list list js-mobile-menu-links">
                     <li class="mobile-menu__navigation-item">
                         <a class="mobile-menu__navigation-link link" href="#about" aria-label="About">About</a>
                     </li>
@@ -84,7 +85,7 @@
                 </ul>
             </nav>
             <a class="contacts__phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="btn btn--mode-light" type="button" mobile-modal-open>book a service</button>
+            <button class="btn btn--mode-light js-mobile-modal-open" type="button">book a service</button>
             <ul class="mobile-menu__socials socials list">
                 <li class="socials__item"><a class="socials__link link" href="https://www.instagram.com/"
                         target="_blank" rel="noreferrer noopener">Instagram</a>
@@ -96,9 +97,9 @@
         </div>
     </header>
     <!-- ==== MODAL WINDOW ==== -->
-    <div class="backdrop is-hidden" data-modal mobile-modal>
+    <div class="backdrop is-hidden js-modal js-mobile-modal">
         <div class="modal">
-            <button class="modal__btn-close" aria-label="Close" data-modal-close mobile-modal-close>
+            <button class="modal__btn-close js-modal-close js-mobile-modal-close" aria-label="Close">
                 <svg class="modal__icon" width="40" height="40">
                     <use href="./images/sprite.svg#close_40px"></use>
                 </svg>
@@ -270,8 +271,8 @@
                             <source media="(min-width:768px )"
                                 srcset="./images/about/work-1-tab.webp 1x, ./images/about/work-1-tab@2x.webp 2x"
                                 type="image/webp" />
-                            <img class="about__image" src="./images/about/work-1-desk.jpg" alt="Shaving beard" srcset="./images/about/work-1-desk.jpg 1x, ./images/about/work-1-desk@2x.jpg 2x,
-                                ./images/about/work-1-tab.jpg 1x, ./images/about/work-1-tab@2x.jpg 2x"
+                            <img class="about__image" src="./images/about/work-1-desk.jpg" alt="Shaving beard" srcset="./images/about/work-1-desk.jpg 270w, ./images/about/work-1-desk@2x.jpg 540w,
+                                ./images/about/work-1-tab.jpg 330w, ./images/about/work-1-tab@2x.jpg 660w"
                                 sizes="(min-width:1280px) 270px, (min-width:768px) 330px, 100vw" width="270"
                                 height="445" loading="lazy">
                         </picture>
@@ -284,8 +285,8 @@
                             <source media="(min-width:768px )"
                                 srcset="./images/about/work-2-tab.webp 1x, ./images/about/work-2-tab@2x.webp 2x"
                                 type="image/webp" />
-                            <img class="about__image" src="./images/about/work-2-desk.jpg" alt="Shaving beard" srcset="./images/about/work-2-desk.jpg 1x, ./images/about/work-2-desk@2x.jpg 2x,
-                                ./images/about/work-2-tab.jpg 1x, ./images/about/work-2-tab@2x.jpg 2x"
+                            <img class="about__image" src="./images/about/work-2-desk.jpg" alt="Shaving beard" srcset="./images/about/work-2-desk.jpg 270w, ./images/about/work-2-desk@2x.jpg 540w,
+                                ./images/about/work-2-tab.jpg 330w, ./images/about/work-2-tab@2x.jpg 660w"
                                 sizes="(min-width:1280px) 270px, (min-width:768px) 330px, 100vw" width="270"
                                 height="445" loading="lazy">
                         </picture>
@@ -674,8 +675,7 @@
                             <span class="form__label">Telephone*</span>
                         </label>
                         <label class="form__field form__field-comment" aria-label="Comment">
-                            <textarea class="form__comment" type="text" name="comment"
-                                placeholder="Your comment"></textarea>
+                            <textarea class="form__comment" name="comment" placeholder="Your comment"></textarea>
                             <span class="form__label">Message</span>
                         </label>
                     </form>

@@ -1,9 +1,9 @@
 // ========= modal window =========
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
+    openModalBtn: document.querySelector('.js-modal-open'),
+    closeModalBtn: document.querySelector('.js-modal-close'),
+    modal: document.querySelector('.js-modal'),
     body: document.querySelector('#body'),
   };
 
