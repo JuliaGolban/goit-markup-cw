@@ -25,7 +25,7 @@
     width: 25px;
     height: 25px;
 
-    background-color: var(--color-accent);
+    background-color: rgba(255, 106, 0, 0.6);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -33,8 +33,8 @@
     animation: slide-top 1s linear 2s infinite alternate both;
 
     @include mq(tablet) {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -45,7 +45,7 @@
     height: 10px;
 
     @include mq(tablet) {
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
     }
 }
