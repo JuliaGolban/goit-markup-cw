@@ -911,7 +911,7 @@ body {
     position: absolute;
     top: 50%;
     right: 39px;
-    z-index: 10;
+    z-index: 9;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1457,6 +1457,7 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    z-index: 10;
     width: 90px;
     padding-left: 25px;
     padding-bottom: 40px;
