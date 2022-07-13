@@ -20,14 +20,15 @@
     & .btn {
         animation: swing 6s ease-in-out infinite forwards;
     }
-}
 
-.header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    text-align: left;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        text-align: left;
+    }
 }
 
 // ========== logo ==========
@@ -46,37 +47,38 @@
 }
 
 // ========== navigation ==========
+.navigation {
+    &__list {
+        display: none;
 
-.navigation__list {
-    display: none;
+        @include mq(desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
 
-    @include mq(desktop) {
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__link {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.1em;
+
+        color: var(--color-text-white);
     }
-}
-
-.navigation__item {
-
-    &:not(:last-child) {
-        margin-right: 40px;
-    }
-}
-
-.navigation__link {
-    display: flex;
-    align-items: center;
-
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-
-    color: var(--color-text-white);
 }
 
 //  ========== telephone and button ==========

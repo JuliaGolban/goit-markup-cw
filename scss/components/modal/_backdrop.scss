@@ -11,10 +11,11 @@
 
     transition: opacity var(--animation), visibility var(--animation),
         transform var(--animation);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
 }

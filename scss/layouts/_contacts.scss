@@ -46,13 +46,14 @@
             background-image: -webkit-image-set(url(../images/contacts/bg-contacts-desk@2x.webp) 2x);
         }
     }
-}
 
-.contacts__container {
 
-    @include mq(desktop) {
-        display: flex;
-        justify-content: space-between;
+    &__container {
+
+        @include mq(desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -275,27 +276,28 @@
     @include mq(desktop) {
         margin-bottom: 70px;
     }
-}
 
-.address__item {
-    font-size: 18px;
-    line-height: 1.67;
 
-    color: var(--color-text-light);
+    &__item {
+        font-size: 18px;
+        line-height: 1.67;
 
-    &:not(:last-child) {
-        margin-bottom: 20px;
+        color: var(--color-text-light);
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
-}
 
-.adress__link {
-    display: flex;
-    align-items: center;
-}
+    &__link {
+        display: flex;
+        align-items: center;
+    }
 
-.address__icon {
-    margin-right: 16px;
-    fill: currentColor;
+    &__icon {
+        margin-right: 16px;
+        fill: currentColor;
+    }
 }
 
 .worktime {
